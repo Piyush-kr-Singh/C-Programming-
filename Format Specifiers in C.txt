@@ -1,0 +1,250 @@
+// Format Specifiers in C
+
+
+
+
+// 01. %c
+
+// The %c is the format specifier for the char data type in C language. 
+// It can be used for both formatted input and formatted output in C language.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     char c;
+//     printf("Enter some character: ");
+//     scanf("%c", &c);
+//     printf("The entered character: %c", c);
+//     return 0;
+// }
+
+
+// Output : Enter some character: a
+//          The entered character: a
+
+
+
+
+
+// 02. %d
+
+// We can use the signed integer format specifier %d in the scanf() and print() functions or other 
+// functions that use formatted string for input and output of int data type.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     int x;
+//     printf("Enter the two integers: ");
+//     scanf("%i", &x);
+//     printf("Printed using %%d: %d\n", x);
+//     printf("Printed using %%i: %3i\n", x);  
+    
+//     // In the above line %3i means it takes 3 spaces if no integer, 2 spaces if one-digit number, 
+//     //1 spaces if two-digit number and no space if more than three-digits.
+    
+//     return 0;
+// }
+
+
+// output : Printed using %d: 23
+//          Printed using %i:  23
+
+
+
+// Difference between %d and %i
+
+// %d: This specifier is used to interpret the input as a signed decimal integer. 
+//     It is the most commonly used specifier for printing and reading integers.
+
+// %i: This specifier is more flexible than %d. It can interpret the input as a signed decimal integer 
+    //   (like %d), octal integer (if preceded by 0), or hexadecimal integer (if preceded by 0x or 0X). 
+    //   The %i specifier allows you to work with integers in different bases.
+
+
+
+
+
+// 03. %u 
+
+// The %u is the format specifier for the unsigned integer data type. If we specify a negative 
+// integer value to the %u, it converts the integer to its first complement.
+
+
+// #include <stdio.h>
+ 
+// int main()
+// {
+//     unsigned int var;
+//     printf("Enter an integer: ");
+//     scanf("%u", &var);
+//     printf("Entered Unsigned Integer: %u", var);
+//     return 0;
+// }
+
+
+// output:  Enter an integer: -10
+//          Entered Unsigned Integer: 4294967286
+
+
+
+
+
+// 04. %f or %e or %E
+
+// The %f is the floating point format specifier in C language that can be used inside the 
+// formatted string for input and output of float data type. Apart from %f, we can use %e or %E 
+// format specifiers to print the floating point value in the exponential form.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     float a = 4233.6744;
+//     printf("Using %%f: %f\n", a);
+//     printf("Using %%e: %.4e\n", a);
+//     printf("Using %%E, %E", a);
+//     // The result will indicate the amount of time the decimal has been shifted. In this code, 
+//     // the decimal is pointed after just one digit. For example, the code above shifts the decimal three 
+//     // times; therefore, we add e/E + 03 at the end after printing the six decimal places because it is a 
+//     // floating point integer.
+//     return 0;
+// }
+
+
+// Output : Using %f: 4233.674316
+//          Using %e: 4.2337e+03
+//          Using %E, 4.233674E+03
+
+
+
+
+
+// 05. %o
+
+// We can use the %o format specifier in the C program to print or take input for the
+// unsigned octal integer number.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 067; int b=0;
+//     printf("Value of 67 in octal : %o\n", a);
+//     printf("Enter the value you want to convert in octal :");
+//     scanf("%i",&b);
+//     printf("Your output is : %o",b);
+//     return 0;
+// }
+
+
+// output : Value of 67 in octal : 67
+//          Enter the value you want to convert in octal :9
+//          Your output is : 11
+
+
+
+
+
+// 06. %x 
+
+// The %x format specifier is used in the formatted string for hexadecimal integers. 
+// In this case, the alphabets in the hexadecimal numbers will be in lowercase. 
+// For uppercase alphabet digits, we use %X instead.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 15454;
+//     printf("%x\n", a);
+//     printf("%X", a);
+//     return 0;
+// }
+
+
+// output : 3c5e
+//          3C5E
+
+
+
+
+
+// 07. %s 
+
+// The %s in C is used to print strings or take strings as input.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     char a[] = "Hello World is the first program in C language.";
+//     printf("%s\n", a);
+    
+//     char str[50];
+//     printf("Enter the String: ");
+//     scanf("%s", str);
+//     printf("Entered String: %s", str);
+//     return 0;
+// }
+
+
+// Output : Hello World is the first program in C language.
+// Enter the String: first program done!!
+// Entered String: first
+
+
+
+
+
+// 08. %p
+
+// The C language also provides the format specifier to print the address/pointers. 
+// We can use %p to print addresses and pointers in C.
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 10;
+//     printf("The Memory Address of a: %p\n",&a);
+//     return 0;
+// }
+
+
+// Output : The Memory Address of a: 0x7fffe8699734 (Address/Pointer will change continuously.)
+
+
+
+
+// Example of I/O Formatting
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     char str[] = "geeksforgeeks";
+//     float a = 2234.56;
+//     printf("%20s\n", str);
+//     printf("%-20s\n", str);
+//     printf("%20.5s\n", str);
+//     printf("%-20.5s\n", str);
+    
+//     printf("%20f\n", a);
+//     printf("%-20f\n", a);
+//     printf("%20.5f\n", a);
+//     printf("%-20.5f\n", a);
+//     return 0;
+// }
+
+
+// Output :        geeksforgeeks
+//          geeksforgeeks       
+//                         geeks
+//          geeks               
+//                   2234.560059
+//          2234.560059         
+//                    2234.56006
+//          2234.56006 
