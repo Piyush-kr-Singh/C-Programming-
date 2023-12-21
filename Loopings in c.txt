@@ -1,0 +1,497 @@
+// Accept ‘n’, print from 1 to n
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n : ");
+//     scanf("%d", &n);
+//     printf("Printing the numbers from 1 to n :\n");
+//     for(int i=1; i<=n; i++)
+//     {
+//         printf("%d ",i);
+//     }
+// }
+
+
+
+
+// Accept ‘n’, print from n to 1
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n : ");
+//     scanf("%d", &n);
+//     printf("Printing the numbers from n to 1 :\n");
+//     for(int i=n; i>=1; i--)
+//     {
+//         printf("%d ",i);
+//     }
+// }
+
+
+
+
+
+// Accept ‘m’ and ‘n’, print from ‘m’ to ‘n’, forward and reverse
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int m,n;
+//     printf("Enter the range from m to n : ");
+//     scanf("%d %d",&m,&n);
+    
+//     printf("Printing the numbers from m to n : \n");
+//     for(int i=m; i<=n; i++)
+//     {
+//         printf("%d ",i);
+//     }
+    
+//     printf("\nPrinting the numbers from n to m :\n");
+//     for(int i=n; i>=m; i--)
+//     {
+//         printf("%d ",i);
+//     }
+
+// }
+
+
+
+
+
+// 4.	Accept ‘n’, 
+// a.	print all even numbers from 1 to ‘n’
+// b.	print all odd numbers from 1 to ‘n’
+
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n : ");
+//     scanf("%d", &n);
+//     printf("Printing even numbers from 1 to n :\n");
+//     for(int i=1; i<=n; i++)
+//     {
+//         if(i%2==0)
+//         {
+//             printf("%d ",i);
+//         }
+//     }
+    
+//     printf("\nPrinting odd numbers from 1 to n :\n");
+//     for(int i=1; i<=n; i++)
+//     {
+//         if(i%2!=0)
+//         {
+//             printf("%d ",i);
+//         }
+//     }
+// }
+
+
+
+
+
+
+// 5.	Accept ‘n’, print sum of all numbers from 1 to ‘n’
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n : ");
+//     scanf("%d", &n);
+//     int sum=0;
+//     for(int i=1; i<=n; i++)
+//     {
+//         sum=sum+i;
+//     }
+//     printf("Sum of the numbers from 1 to n : %d",sum);
+// }
+
+
+
+
+
+// 6.	Accept ‘n’, print product of all numbers from 1 to ‘n’/ factorial of n
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n : ");
+//     scanf("%d", &n);
+//     int product=1;
+//     for(int i=1; i<=n; i++)
+//     {
+//         product=product*i;
+//     }
+//     printf("Product of the numbers from 1 to n : %d",product);
+// }
+
+
+
+
+
+
+// 7.	Accept ‘n’
+// a.	print Fibonacci of all numbers from 1 to ‘n’
+// b.	print ‘n’ Fibonacci numbers
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int first=0;
+//     int second=1;
+//     int third=0;
+    
+//     int n;
+//     printf("Enter the value of n: ");
+//     scanf("%d",&n);
+    
+//     printf("%d %d ",first,second);
+//     for(int i=1; i<=n-2; i++)
+//     {
+//         third=first+second;
+//         first=second;
+//         second=third;
+//         printf("%d ",third);
+//     }
+// }
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int first=0;
+//     int second=1;
+//     int third=0;
+    
+//     int n;
+//     printf("Enter the value of n: ");
+//     scanf("%d",&n);
+//     for(int i=1; i<=n-2; i++)
+//     {
+//         third=first+second;
+//         first=second;
+//         second=third;
+//     }
+//     printf("%d ",third);
+// }
+
+
+
+
+
+// 8.	Accept base ‘x’ and exponent ‘n’, print xn
+
+
+// #include<stdio.h>
+// #include<math.h>
+
+// int main()
+// {
+//     float n,x;
+
+//     printf("Print the value of base and exponent : ");
+//     scanf("%f %f",&x, &n);
+//     float product=0;
+
+//     if(n>0)
+//     {
+//         product = pow(x,n);
+//     }
+//     else
+//     {
+//         n=-1*n;
+//         product = pow(x,n);
+//         product=1/product;
+//     }
+//     printf("The final output is : %f",product);
+// }
+
+
+
+
+
+
+// 9.	Accept two numbers, print GCD/HCF and LCM.
+
+
+// #include<stdio.h>
+
+// int gcd(int a, int b)
+// {
+//     int smaller=0;
+//     if(a>b)
+//     {
+//         smaller=b;
+//     }
+//     else
+//     {
+//         smaller=a;
+//     }
+    
+//     for(int i=smaller; i>=1; i--)
+//     {
+//         if(a%i==0 && b%i==0)
+//         {
+//             return i;
+//         }
+//     }
+// }
+
+
+// int lcm(int a, int b)
+// {
+//     int larger=0;
+//     if(a>b)
+//     {
+//         larger=a;
+//     }
+//     else
+//     {
+//         larger=b;
+//     }
+    
+//     for(int i=larger; i<=a*b; i++)
+//     {
+//         if(i%a==0 && i%b==0)
+//         {
+//             return i;
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     int a,b;
+    
+//     printf("Enter two numbers : ");
+//     scanf("%d %d",&a,&b);
+    
+//     int ans1=gcd(a,b);
+//     int ans2=lcm(a,b);
+    
+//     printf("GCD of numbers are : %d\n",ans1);
+//     printf("LCM of numbers are : %d",ans2);
+// }
+
+
+
+
+
+
+// 10.	Accept a number ‘n’
+// a.	check it is prime number or not
+// b.	generate all prime number within the range 1-n
+// c.	print all factors of n
+// d.	print all prime factors of n
+
+
+
+// #include<stdio.h>
+// #include<stdbool.h>
+
+
+// bool isprime(int n)
+// {
+//     for(int i=2; i<n; i++)
+//     {
+//         if(n%i == 0)
+//         {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+
+// void generateprime(int n)
+// {
+//     bool ans=0;
+//     for(int i=2; i<=n; i++)
+//     {
+//         ans=isprime(i);
+        
+//         if(ans==1)
+//         {
+//             printf("%d ",i);
+//         }
+//     }
+// }
+
+
+// void printfactors(int n)
+// {
+//     for(int i=1; i<=n/2; i++)
+//     {
+//         if(n%i==0)
+//         {
+//             printf("%d ",i);
+//         }
+//     }
+// }
+
+// void primefactors(int n)
+// {
+//     for(int i=2; i<=n/2; i++)
+//     {
+//         if(n%i==0)
+//         {
+//             if(isprime(i))
+//             {
+//                 printf("%d ", i);
+//             }
+//         }
+//     }
+// }
+
+
+// int main()
+// {
+//     int n;
+//     printf("Enter a number : ");
+//     scanf("%d",&n);
+    
+//     bool ans=isprime(n);
+//     if(ans==1)
+//     {
+//         printf("Number is prime\n");
+//     }
+//     else
+//     {
+//         printf("Number is not prime\n");
+//     }
+    
+//     printf("Prime numbers in between range of 1 to given number : \n");
+//     generateprime(n);
+    
+//     printf("\nAll the factors of given number are : \n");
+//     printfactors(n);
+    
+//     printf("\nAll the prime factors of the given number are : \n");
+//     primefactors(n);
+// }
+
+
+
+
+
+
+// #include<stdio.h>
+// #include<limits.h>
+
+// int main()
+// {
+//     int n;
+//     char c;
+//     int maxi=INT_MIN;
+//     int secmaxi=INT_MIN;
+    
+//     int mini=INT_MAX;
+//     int secmini=INT_MAX;
+    
+    
+//     do{
+//         printf("\nEnter a number : ");
+//         scanf("%d",&n);
+        
+//         if(n>maxi)
+//         {
+//             secmaxi=maxi;
+//             maxi=n;
+//         }
+//         else if(n>secmaxi && n!=maxi)
+//         {
+//             secmaxi=n;
+//         }
+        
+        
+//         if(n<mini)
+//         {
+//             secmini=mini;
+//             mini=n;
+//         }
+//         else if(n<secmini && n!=mini)
+//         {
+//             secmini=n;
+//         }
+        
+//         printf("Enter 'y' or 'Y' if you want to enter number again : ");
+//         scanf(" %c",&c);
+//     }
+    
+//     while(c=='y' || c=='Y');
+    
+//     printf("\nMaximum among numbers : %d ", maxi);
+//     printf("\nSecond maximum among numbers : %d ",secmaxi);
+//     printf("\nMinimum among numbers : %d ", mini);
+//     printf("\nSecond minimum among numbers : %d ",secmini);
+// }
+
+
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     do{
+//         printf("Enter a number : ");
+//         scanf("%d",&n);
+        
+//         printf("Entered number is : %d\n", n);
+        
+//     }
+//     while(n!=99);
+// }
+
+
+
+
+
+// #include<stdio.h>
+
+// int countdigits(int n)
+// {
+//     int count=0;
+    
+//     while(n)
+//     {
+//         count++;
+//         n=n/10;
+//     }
+//     return count;
+// }
+
+// int main()
+// {
+//     int n;
+    
+//     printf("Enter a multi-digit number : ");
+//     scanf("%d",&n);
+    
+//     int ans1=countdigits(n);
+//     printf("Number of digits : %d",ans1);
+// }
