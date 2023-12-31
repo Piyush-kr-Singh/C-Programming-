@@ -397,6 +397,9 @@
 
 
 
+// 11.	Keep on accepting number till user wises, print the maximum, second maximum, 
+// minimum, second minimum when he stops.
+
 
 // #include<stdio.h>
 // #include<limits.h>
@@ -452,6 +455,9 @@
 
 
 
+// 12.	Keep on accepting a number and print the same till user enters 99
+
+
 // #include<stdio.h>
 
 // int main()
@@ -471,6 +477,15 @@
 
 
 
+
+// 13.	Accept a multi-digit number 
+// a.	print the number of digits
+// b.	reverse the number
+// c.	check whether a number is palindrome
+// d.	check whether the number is Armstrong number or not
+
+
+
 // #include<stdio.h>
 
 // int countdigits(int n)
@@ -485,6 +500,46 @@
 //     return count;
 // }
 
+// int reverse(int n)
+// {
+//     int temp=0;
+//     int rev=0;
+//     int sum=0;
+    
+//     while(n)
+//     {
+//         temp=n%10;
+//         sum=sum*10+temp;
+//         n=n/10;
+//     }
+    
+//     return sum;
+// }
+
+
+// void armstrong(int n)
+// {
+//     int temp=0;
+//     int rev=0;
+//     int n1=n;
+    
+//     while(n)
+//     {
+//         temp=n%10;
+//         rev=rev+ temp*temp*temp;
+//         n=n/10;
+//     }
+    
+//     if(n1==rev)
+//     {
+//         printf("Yes the number is Armstrong");
+//     }
+//     else
+//     {
+//         printf("No, the number is not Armstrong");
+//     }
+// }
+
 // int main()
 // {
 //     int n;
@@ -493,5 +548,56 @@
 //     scanf("%d",&n);
     
 //     int ans1=countdigits(n);
-//     printf("Number of digits : %d",ans1);
+//     printf("Number of digits : %d\n",ans1);
+    
+//     int ans2=reverse(n);
+//     printf("Reverse of the number is : %d\n",ans2);
+    
+//     if(n==ans2)
+//     {
+//         printf("Yes the number is palindrome\n");
+//     }
+//     else
+//     {
+//         printf("No the number is not palindrome\n");
+//     }
+    
+//     armstrong(n);
 // }
+
+
+
+
+
+// 14.	Accept a number ‘n’
+// a.	print multiplication table of ‘n’
+// b.	print multiplication table till ‘n’
+
+
+// #include<stdio.h>
+
+// int main()
+// {
+//     int n;
+//     printf("Enter the number : ");
+//     scanf("%d",&n);
+    
+//     printf("Multiplication table of : %d\n",n);
+//     for(int i=1; i<=10; i++)
+//     {
+//         printf("%d x %d = %d\n", n,i,n*i);
+//     }
+    
+//     printf("\nMultiplication table upto : %d\n",n);
+//     for(int i=1; i<=n; i++)
+//     {
+//         printf("\nMultiplication table of :%d\n",i);
+//         for(int j=1; j<=10; j++)
+//         {
+//             printf("%d x %d = %d\n", i,j,i*j);
+//         }
+//     }
+// }
+
+
+
